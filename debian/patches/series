@@ -1,0 +1,15 @@
+0001-dont-drop-g.patch
+0002-fix-unresolved-reference-size.patch
+0003-fix-epydoc-ignore.patch
+0004-fix-cipher-iv-documentation.patch
+0005-reenable-redefined-tests.patch
+0006-fix-py3-errors.patch
+0007-fix-except-shadows-builtin.patch
+0008-multiprocessing-test.patch
+0009-unittest-stream.patch
+0010-deprecated-test-methods.patch
+0011-asn1-decoding.patch
+0012-CVE-2013-7459.patch
+0013-Backport-of-fix-for-CVE-2018-6594-from-pycryptodome.patch
+0014-Replace-time.clock-with-timeit.default_timer.patch
+0015-Use-for-int-compare.patch

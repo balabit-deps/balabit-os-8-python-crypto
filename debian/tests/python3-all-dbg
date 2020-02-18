@@ -1,0 +1,8 @@
+#!/bin/bash
+set -e
+
+PYVERS=$(py3versions -vi)
+
+for py in $PYVERS ; do
+  python$py-dbg -c "import Crypto.SelfTest; Crypto.SelfTest.run()"
+done

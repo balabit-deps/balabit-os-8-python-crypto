@@ -1,0 +1,21 @@
+#!/usr/bin/make -f
+
+# build with -O3 (as upstream does) if noopt is not set
+ifeq (,$(findstring noopt,$(DEB_BUILD_OPTIONS)))
+export DEB_CFLAGS_MAINT_APPEND=-O3
+endif
+
+export PYBUILD_NAME=crypto
+
+%:
+	dh $@ --with=python2,python3 --buildsystem=pybuild
+
+override_dh_clean:
+	# Keep LEGAL/copy/LICENSE.orig
+	dh_clean -XLEGAL/copy/LICENSE.orig
+
+override_dh_auto_test-arch:
+	dh_auto_test -- -s custom --test-args="{interpreter} setup.py test"
+
+# no test and install for indep
+override_dh_auto_install-indep override_dh_auto_test-indep:

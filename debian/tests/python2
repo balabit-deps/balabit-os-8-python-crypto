@@ -1,0 +1,4 @@
+#!/bin/bash
+set -e
+
+python2 -c "import Crypto.SelfTest; Crypto.SelfTest.run()"

@@ -1,0 +1,15 @@
+Tests: python2
+Depends: python-crypto
+Restrictions: allow-stderr
+
+Tests: python3
+Depends: python3-crypto
+Restrictions: allow-stderr
+
+Tests: python3-all
+Depends: python3-all, python3-crypto
+Restrictions: allow-stderr
+
+Tests: python3-all-dbg
+Depends: python3-all-dbg, python3-crypto-dbg
+Restrictions: allow-stderr
